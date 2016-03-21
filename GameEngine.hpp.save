@@ -1,0 +1,30 @@
+#ifndef GAMEENGINE_H
+#define GAMEENGINE_H
+
+#include "SFML/Graphics.hpp"
+//#include "player.hpp"
+#include <string>
+#include <iostream>
+#include "SFML/Audio.hpp"
+
+using namespace std;
+
+class GameEngine
+{
+public:
+	GameEngine();
+	void runGame();
+	void handleEvents();
+
+protected:
+	sf::RenderWindow window;
+	sf::Event event;
+};
+
+
+	player_position(int x, int y)
+}
+
+
+
+#endif

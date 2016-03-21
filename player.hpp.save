@@ -1,0 +1,57 @@
+
+#ifndef PLAYER_H
+#define PLAYER_H
+
+#include <iostream>
+#include <stdlib.h>
+#include "GameEngine.hpp"
+#include "SFML/Graphics.hpp"
+class data 
+{
+public:
+        data(){};
+        void reload();
+        void input_value();
+        int get_value(int x, int y);
+protected:
+        int **Card_play;
+
+};
+
+class player
+{
+public: 
+        player();
+	player(int x, int y);
+        void win_money(int x);
+        int show_money();
+        void get_score(int x);
+        int show_score();
+        void get_bet(int x);
+        int show_bet();
+        void get_position(int x, int y);
+        int show_x();
+        int show_y();
+	sf::vector2f return_point();
+	void reset_point();
+	void hit();
+	void draw(sf::WindowRender *window,sf::Sprite spi[times], sf::Vector2f set_point[times]); 
+protected:
+	int total_score;
+        int total_money;
+        int bet_money;
+        int pos_x;
+        int pos_y;
+	sf::Vector2f set_point[5];
+	sf::Texture tex[5];
+	sf::Sprite  spi[5];
+	int i[5];
+	int j[5];
+	int times;
+	sf::Texture table;
+	sf::Sprite tab;
+};
+
+
+#endif
+
